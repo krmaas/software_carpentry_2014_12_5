@@ -1,0 +1,26 @@
+## session 1.2 R objects
+gDat <- read.delim("gapminderDataFiveYear.txt")
+str(gDat)
+head(gDat,n=4)
+tail(gDat, n=11)
+names(gDat)
+dim(gDat)
+nrow(gDat)
+length(gDat)
+summary(gDat)
+
+plot(lifeExp~year, data=gDat)
+plot(lifeExp~gdpPercap, data=gDat)
+plot(y=gDat$lifeExp, x=gDat$gdpPercap)
+
+summary(gDat$lifeExp)
+hist(gDat$lifeExp)
+hist(gDat$gdpPercap)
+hist(gDat$gdpPercap~gDat$continent)
+
+str(gDat)
+subset(gDat, subset=country==c("Cambodia", "Japan", "Spain"))
+subset(gDat, subset=lifeExp<=32)
+subset(gDat, subset=lifeExp<32, select=c(country, lifeExp, pop))
+plot(lifeExp~year, data=gDat, subset=country=="Cambodia")
+abline(lm(lifeExp~year, data=gDat, subset=country=="Cambodia"), col="blue", lwd=3)
