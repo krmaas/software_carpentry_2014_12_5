@@ -70,4 +70,4 @@ quantile_diff(gDat$lifeExp, probs = c(0.5, 0.7))
 quantile_diff(gDat$lifeExp)
 
 
-### could add last argument "..."  which allows your function to take any argument even if it's not defined in your function, it'll be passed to other functions within
+## could add last argument "..."  which allows your function to take any argument even if it's not defined in your function, it'll be passed to other functions within
